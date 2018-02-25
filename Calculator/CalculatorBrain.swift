@@ -12,7 +12,7 @@ struct CalculatorBrain{
     var accumulator: Double?
     
     private var currentPendingBinaryOperation: PendingBinaryOperation?
-    private var isNotBinaryOperation: Bool = false
+    private var isUnaryOperation: Bool = false
     
     enum Operation {
         case constant(Double)
@@ -51,31 +51,31 @@ struct CalculatorBrain{
             switch operation {
             case Operation.constant(let value):
                 accumulator = value
-                isNotBinaryOperation = true
+                isUnaryOperation = false
             case Operation.unaryOperation(let function):
                 if let value = accumulator {
                     accumulator = function(value)
-                    isNotBinaryOperation = true
+                    isUnaryOperation = true
                 }
             case .binaryOperation(let function):
                 if let firstOperand = accumulator {
                     currentPendingBinaryOperation = PendingBinaryOperation(firstOperand: firstOperand, function: function)
                     accumulator = nil
-                    isNotBinaryOperation = false
+                    isUnaryOperation = false
                 }
             case .factorial:
                 if let value = accumulator{
                     accumulator = factorial(of: value)
-                    isNotBinaryOperation = true
+                    isUnaryOperation = true
                 }
             case .equals: //have to press equals with every function
-                if !isNotBinaryOperation{
+                if !isUnaryOperation{
                     performBinaryOperation()
                     handleEqualOperation()
                 }
             case .clear:
                 clearData()
-                isNotBinaryOperation = false
+                isUnaryOperation = false
             }
             
         }

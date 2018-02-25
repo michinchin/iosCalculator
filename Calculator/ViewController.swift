@@ -8,11 +8,6 @@ class ViewController: UIViewController {
 
     var userIsCurrentlyTyping = false
     var decimalPointButtonHasBeenPressed: Bool = false
-
-//    @IBAction func clearButton(_ sender: Any) {
-//        display.text = "0"
-//        userIsCurrentlyTyping = false
-//    }
     
     @IBAction func numberButtonPressed(_ sender: UIButton) {
         let buttonText: String = sender.currentTitle!
@@ -49,13 +44,6 @@ class ViewController: UIViewController {
             displayValue = result
         }
     }
-//    func backspace(){
-//        if var text = display.text{
-//            let index = text.endIndex
-//            text.remove(at: index)
-//        }
-//    }
-//
     
     var displayValue: Double {
         get {
