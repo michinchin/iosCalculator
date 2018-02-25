@@ -7,6 +7,7 @@ class ViewController: UIViewController {
     var brain = CalculatorBrain()
 
     var userIsCurrentlyTyping = false
+    var decimalPointButtonHasBeenPressed: Bool = false
 
 //    @IBAction func clearButton(_ sender: Any) {
 //        display.text = "0"
@@ -24,6 +25,19 @@ class ViewController: UIViewController {
             userIsCurrentlyTyping = true
         }
     }
+    
+  
+    @IBAction func decimalButtonPressed(_ sender: UIButton) {
+        let buttonText: String = sender.currentTitle!
+        let currentText = display.text!
+
+        if !currentText.contains("."){
+            display.text = currentText + buttonText
+        }
+        userIsCurrentlyTyping = true
+
+    }
+    
     
     @IBAction func operationButtonPressed(_ sender: UIButton) {
         userIsCurrentlyTyping = false

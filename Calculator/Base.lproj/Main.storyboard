@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POe-x5-Chb">
-                                        <rect key="frame" x="20" y="109.5" width="335" height="65"/>
+                                        <rect key="frame" x="172" y="109.5" width="31" height="65"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -37,9 +37,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="POe-x5-Chb" firstAttribute="centerY" secondItem="fhU-aW-2Hq" secondAttribute="centerY" id="2cZ-nm-T3l"/>
-                                    <constraint firstItem="POe-x5-Chb" firstAttribute="leading" secondItem="fhU-aW-2Hq" secondAttribute="leading" constant="20" id="Fqj-D0-1Xc"/>
+                                    <constraint firstItem="POe-x5-Chb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fhU-aW-2Hq" secondAttribute="leading" id="Fqj-D0-1Xc"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="OCn-Ut-d0T"/>
-                                    <constraint firstAttribute="trailing" secondItem="POe-x5-Chb" secondAttribute="trailing" constant="20" id="Rdy-4q-J5e"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="POe-x5-Chb" secondAttribute="trailing" id="Rdy-4q-J5e"/>
                                     <constraint firstItem="POe-x5-Chb" firstAttribute="centerX" secondItem="fhU-aW-2Hq" secondAttribute="centerX" id="vt7-9I-MNT"/>
                                 </constraints>
                             </view>
@@ -459,6 +459,9 @@
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="decimalButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="bCc-cI-yLa"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uQ-vn-TMi" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="206" y="0.0" width="60.5" height="48"/>

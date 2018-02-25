@@ -12,6 +12,7 @@ struct CalculatorBrain{
     var accumulator: Double?
     
     private var currentPendingBinaryOperation: PendingBinaryOperation?
+    private var isNotBinaryOperation: Bool = false
     
     enum Operation {
         case constant(Double)
@@ -19,6 +20,7 @@ struct CalculatorBrain{
         case binaryOperation( (Double,Double) -> Double )
         case equals
         case clear
+        case factorial
     }
     
     
@@ -27,6 +29,7 @@ struct CalculatorBrain{
         "e": Operation.constant(M_E),
         "√": Operation.unaryOperation(sqrt),
         "∛": Operation.unaryOperation({pow($0, 1/3)}),
+        "!": Operation.factorial,
         "cos": Operation.unaryOperation(cos),
         "sin": Operation.unaryOperation(sin),
         "tan": Operation.unaryOperation(tan),
@@ -48,20 +51,31 @@ struct CalculatorBrain{
             switch operation {
             case Operation.constant(let value):
                 accumulator = value
+                isNotBinaryOperation = true
             case Operation.unaryOperation(let function):
                 if let value = accumulator {
                     accumulator = function(value)
+                    isNotBinaryOperation = true
                 }
             case .binaryOperation(let function):
                 if let firstOperand = accumulator {
                     currentPendingBinaryOperation = PendingBinaryOperation(firstOperand: firstOperand, function: function)
                     accumulator = nil
+                    isNotBinaryOperation = false
                 }
-            case .equals:
-                performBinaryOperation()
-                handleEqualOperation()
+            case .factorial:
+                if let value = accumulator{
+                    accumulator = factorial(of: value)
+                    isNotBinaryOperation = true
+                }
+            case .equals: //have to press equals with every function
+                if !isNotBinaryOperation{
+                    performBinaryOperation()
+                    handleEqualOperation()
+                }
             case .clear:
                 clearData()
+                isNotBinaryOperation = false
             }
             
         }
@@ -86,7 +100,16 @@ struct CalculatorBrain{
         }
     }
     
-  
+    mutating func factorial(of num: Double) -> Double {
+        let isInteger = floor(num) == num
+        if num == 1 {
+            return 1.0
+        }else if !isInteger{
+            return 0.0
+        } else {
+            return num * factorial(of:num - 1)
+        }
+    }
     
     mutating func setOperand(_ operand: Double) {
         accumulator = operand
