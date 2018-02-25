@@ -26,16 +26,20 @@ struct CalculatorBrain{
         "π": Operation.constant(Double.pi),
         "e": Operation.constant(M_E),
         "√": Operation.unaryOperation(sqrt),
+        "∛": Operation.unaryOperation({pow($0, 1/3)}),
         "cos": Operation.unaryOperation(cos),
         "sin": Operation.unaryOperation(sin),
         "tan": Operation.unaryOperation(tan),
+        "ln": Operation.unaryOperation(log),
+        "log": Operation.unaryOperation({log10($0)}),
+        "%": Operation.unaryOperation({$0 / 100}),
         "×": Operation.binaryOperation({ $0 * $1 }),
         "÷": Operation.binaryOperation({ $0 / $1 }),
         "−": Operation.binaryOperation({ $0 - $1 }),
         "+": Operation.binaryOperation({ $0 + $1 }),
         "=": Operation.equals,
         "^": Operation.binaryOperation({pow($0, $1)}),
-        "+/-": Operation.unaryOperation({ $0 * -1 }),
+        "+/-": Operation.unaryOperation({ -$0 }),
         "C": Operation.clear
     ]
     

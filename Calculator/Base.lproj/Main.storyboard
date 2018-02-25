@@ -24,11 +24,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-aW-2Hq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="303"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-aW-2Hq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POe-x5-Chb">
-                                        <rect key="frame" x="172" y="136" width="31" height="65"/>
+                                        <rect key="frame" x="20" y="109.5" width="335" height="65"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -37,14 +37,17 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="POe-x5-Chb" firstAttribute="centerY" secondItem="fhU-aW-2Hq" secondAttribute="centerY" id="2cZ-nm-T3l"/>
+                                    <constraint firstItem="POe-x5-Chb" firstAttribute="leading" secondItem="fhU-aW-2Hq" secondAttribute="leading" constant="20" id="Fqj-D0-1Xc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="OCn-Ut-d0T"/>
+                                    <constraint firstAttribute="trailing" secondItem="POe-x5-Chb" secondAttribute="trailing" constant="20" id="Rdy-4q-J5e"/>
                                     <constraint firstItem="POe-x5-Chb" firstAttribute="centerX" secondItem="fhU-aW-2Hq" secondAttribute="centerX" id="vt7-9I-MNT"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVP-Aw-5H3">
-                                <rect key="frame" x="20" y="347" width="335" height="300"/>
+                                <rect key="frame" x="20" y="284" width="335" height="363"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UBC-hA-hc4">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="363"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wXt-ZH-tBk">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="48"/>
@@ -58,8 +61,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="lUm-tV-VpR"/>
@@ -74,8 +78,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="UlV-jz-vkf"/>
@@ -90,8 +95,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="T63-Of-nVA"/>
@@ -106,8 +112,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="DPq-6s-cHH"/>
@@ -122,8 +129,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="BrI-EE-0Cm"/>
@@ -138,14 +146,18 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="60.5" height="48"/>
                                                         <color key="backgroundColor" red="0.47058823529999999" green="0.53333333329999999" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="(">
+                                                        <state key="normal" title="ln">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="ST0-g5-Ksi"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgr-W5-7xa" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="68.5" y="0.0" width="60.5" height="48"/>
@@ -156,8 +168,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="iNz-Mg-0cd"/>
@@ -172,8 +185,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="wJ4-ne-pxS"/>
@@ -188,8 +202,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="od7-hn-VTf"/>
@@ -204,8 +219,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="ayv-s3-jDm"/>
@@ -213,21 +229,115 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-ZC-t7g">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vTA-uP-xRz">
                                                 <rect key="frame" x="0.0" y="126" width="335" height="48"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqx-FM-iQR" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="48"/>
+                                                        <color key="backgroundColor" red="0.47058823529999999" green="0.53333333329999999" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="log">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="seq-Iz-M3O"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpM-Cs-T6Q" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="68.5" y="0.0" width="60.5" height="48"/>
+                                                        <color key="backgroundColor" red="0.47058823529999999" green="0.53333333329999999" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="!">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="s7U-Ph-EuT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TB-VU-r3X" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="137" y="0.0" width="61" height="48"/>
+                                                        <color key="backgroundColor" red="0.74688357859999999" green="0.82806657630000002" blue="0.75617889329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="zxR-cQ-WYT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzv-CH-vqU" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="206" y="0.0" width="60.5" height="48"/>
+                                                        <color key="backgroundColor" red="0.74688357859999999" green="0.82806657630000002" blue="0.75617889329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="DOY-cF-gWV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06U-lf-6Gj" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="274.5" y="0.0" width="60.5" height="48"/>
+                                                        <color key="backgroundColor" red="0.74688357859999999" green="0.82806657630000002" blue="0.75617889329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="T6i-cd-fhh"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-ZC-t7g">
+                                                <rect key="frame" x="0.0" y="189" width="335" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4x-o1-kp4" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="60.5" height="48"/>
                                                         <color key="backgroundColor" red="0.47058823529999999" green="0.53333333329999999" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title=")">
+                                                        <state key="normal" title="∛">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="cnw-kD-6VI"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xm-ev-dO5" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="68.5" y="0.0" width="60.5" height="48"/>
@@ -238,8 +348,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="brK-37-kDA"/>
@@ -249,13 +360,14 @@
                                                         <rect key="frame" x="137" y="0.0" width="61" height="48"/>
                                                         <color key="backgroundColor" red="0.74688357858144316" green="0.82806657625333913" blue="0.75617889332458843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="4">
+                                                        <state key="normal" title="7">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="sc6-6n-4Xn"/>
@@ -265,13 +377,14 @@
                                                         <rect key="frame" x="206" y="0.0" width="60.5" height="48"/>
                                                         <color key="backgroundColor" red="0.74688357858144316" green="0.82806657625333913" blue="0.75617889332458843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="5">
+                                                        <state key="normal" title="8">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="PXC-Uj-gR2"/>
@@ -281,13 +394,14 @@
                                                         <rect key="frame" x="274.5" y="0.0" width="60.5" height="48"/>
                                                         <color key="backgroundColor" red="0.74688357858144316" green="0.82806657625333913" blue="0.75617889332458843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                        <state key="normal" title="6">
+                                                        <state key="normal" title="9">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="iPx-Ci-2mx"/>
@@ -296,7 +410,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="H0Y-Oi-NYp">
-                                                <rect key="frame" x="0.0" y="189" width="335" height="48"/>
+                                                <rect key="frame" x="0.0" y="252" width="335" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-gi-tC1" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="60.5" height="48"/>
@@ -307,8 +421,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="czv-lZ-W9j"/>
@@ -323,8 +438,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="hLR-Ur-zaf"/>
@@ -339,12 +455,10 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="e1e-dt-nKN"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uQ-vn-TMi" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="206" y="0.0" width="60.5" height="48"/>
@@ -355,8 +469,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="qwR-MV-wX8"/>
@@ -371,8 +486,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="lZ4-qb-uCo"/>
@@ -381,7 +497,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zTM-Te-NZl">
-                                                <rect key="frame" x="0.0" y="252" width="335" height="48"/>
+                                                <rect key="frame" x="0.0" y="315" width="335" height="48"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vK-pl-qUa" customClass="RoundButton" customModule="Calculator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="60.5" height="48"/>
@@ -392,8 +508,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="pav-mL-UQp"/>
@@ -408,8 +525,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="Kq1-kU-Aha"/>
@@ -424,8 +542,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="CzN-Pt-5uc"/>
@@ -440,8 +559,9 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="mUU-Cv-H6Y"/>
@@ -456,11 +576,11 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="20"/>
+                                                                <real key="value" value="25"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="numberButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="2Mm-Uj-ANc"/>
                                                             <action selector="operationButtonPressed:" destination="Ads-X7-KmV" eventType="touchUpInside" id="GZx-0K-4Jr"/>
                                                         </connections>
                                                     </button>
@@ -481,7 +601,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JVP-Aw-5H3" firstAttribute="top" secondItem="fhU-aW-2Hq" secondAttribute="bottom" constant="10" id="3zk-4d-4EW"/>
+                            <constraint firstItem="JVP-Aw-5H3" firstAttribute="top" secondItem="fhU-aW-2Hq" secondAttribute="bottom" id="3zk-4d-4EW"/>
                             <constraint firstItem="JVP-Aw-5H3" firstAttribute="leading" secondItem="WMh-oA-Ul6" secondAttribute="leading" constant="20" id="6tK-Rp-euS"/>
                             <constraint firstItem="WMh-oA-Ul6" firstAttribute="bottom" secondItem="JVP-Aw-5H3" secondAttribute="bottom" constant="20" id="Anf-Lb-1x7"/>
                             <constraint firstItem="fhU-aW-2Hq" firstAttribute="trailing" secondItem="WMh-oA-Ul6" secondAttribute="trailing" id="WEG-yV-0f7"/>
